@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="app grid_main">
     <Navigation/>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 <script>
@@ -23,6 +25,7 @@ export default {
     font-family: $font-main;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
   * {
     margin: 0;

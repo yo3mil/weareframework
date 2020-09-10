@@ -1,20 +1,14 @@
 <template>
-  <div class="banner grid2x3">
-    <div class="banner__heading">
-        <h2>Figma is an awesome alternative...</h2>
-        <h1>But sorry my</h1>
-        <h1>dearly belowed</h1>
+    <div class="banner grid2x3">
+        <div class="banner__heading">
+            <h2>Figma is an awesome alternative...</h2>
+            <h1>But sorry my</h1>
+            <h1>dearly belowed</h1>
+        </div>
+        <img class="banner__mobile" src="./../../assets/mobile.png" alt="hand with mobile">
+        <div data-depth="0" class="banner__circle1"></div>
+        <div data-depth="0" class="banner__circle2"></div>
     </div>
-    <img class="banner__mobile" src="./../../assets/mobile.png" alt="hand with mobile">
-    
-    
-    <div data-depth="0" class="banner__circle1"></div>
-    <div data-depth="0" class="banner__circle2"></div>
-    
-    
-    
-    
-  </div>
 </template>
 
 <script>
@@ -32,19 +26,12 @@ export default {
 
 <style lang="scss" scoped>
     .banner {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
         width: 100%;
         height: 100%;
-        background: $color-main;
-        background: linear-gradient(
-            125deg, rgba($color-main,1) 
-            0%, rgba($color-main, 0.6) 
-            45%, rgba($color-main,1) 100%);
         overflow: hidden;
-        &__paralax {
-            width: 100%;
-            height: 100%;
-        }
-        &__heading {
+         &__heading {
             color: $color-white;
             grid-column: 2;
             grid-row: 2;
@@ -69,8 +56,8 @@ export default {
             
         }
         &__circle1 {
-            width: 7rem;
-            height: 7rem;
+            width: 8rem;
+            height: 8rem;
             grid-row: 1;
             grid-column: 1;
             align-self: end;
@@ -84,8 +71,8 @@ export default {
             
         }
         &__circle2 {
-            width: 4rem;
-            height: 4rem;
+            width: 4.5rem;
+            height: 4.5rem;
             margin-top: 2rem;
             grid-row: 3;
             grid-column: 2;
