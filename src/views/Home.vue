@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home grid_main">
+    
+    <HeroSection/>
+    <BlogList/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HeroSection from "../components/HeroSection"
+import BlogList from "../components/BlogList";
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    HeroSection,
+    BlogList
   }
 }
 </script>
+<style lang="scss" scoped>
+  .home {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+  }
+</style>
