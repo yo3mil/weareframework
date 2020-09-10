@@ -38,7 +38,9 @@
 
 <style lang="scss" scoped>
     .active {
-        transform: scale(2) translate(15%, 10%) ;
+        transform: scale(2) translate(25%, -5%);
+        border-radius: 2% !important;
+        
     }
     .navigation {
         z-index: 1000;
@@ -46,9 +48,10 @@
         grid-column: 1 / -1;
         position: relative;
         &__menu {
+            z-index: 1000;
             position: absolute;
             margin-right: -2.2rem;
-            width: 18vw;
+            width: 22rem;
             top: 10vh;
             right: 0;
             margin-top: 5vh;
@@ -73,14 +76,15 @@
         }
         &__header,
         &__console {
-            z-index: 900;
-            width: 18vw;
+            
+            width: 22rem;
             height: 100%;
             top: 0;
             position: absolute;
             display: flex;
         }
         &__header {
+            z-index: 500;
             left: 0;
             justify-content: center;
             align-items: center;
@@ -92,7 +96,7 @@
             }
         }
         &__console {
-            
+            z-index: 900;
             right: 0;
             align-items: center;
             justify-content: space-evenly;
@@ -118,13 +122,14 @@
             }
         }
         &__bg {
+            z-index: 800;
             position: absolute;
             right: -22rem;
             top: -32rem;
             border-radius: 50%;
             height: 49rem;
             width: 49rem;
-            transition: all .5s;
+            transition: all 1s;
             
             background: rgb(1,10,114);
             background: radial-gradient(

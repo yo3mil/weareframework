@@ -12,15 +12,15 @@
 </template>
 
 <script>
-// import Parallax from 'parallax-js';
+ //import Parallax from 'parallax-js';
 
 
 export default {
-    mounted() {
-        // let scene = document.getElementById('scene');
-        // let parallaxInstance = new Parallax(scene);
-        // parallaxInstance.friction(0.2, 0.2);
-    }
+    // mounted() {
+    //     let scene = document.getElementById('scene');
+    //     let parallaxInstance = new Parallax(scene);
+    //     parallaxInstance.friction(0.2, 0.2);
+    // }
 }
 </script>
 
