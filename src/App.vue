@@ -25,7 +25,7 @@ export default {
     font-family: $font-main;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   * {
     margin: 0;
