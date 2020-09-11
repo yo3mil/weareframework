@@ -1,6 +1,6 @@
 <template>
     <div class="hero">
-        <transition name="slideLeft" mode="out-in">
+        <transition name="fade" mode="out-in">
             <MobileBanner v-if="banner === 1"></MobileBanner>
             <BlankBannerOne v-if="banner === 2"></BlankBannerOne>
             <BlankBannerTwo v-if="banner === 3"></BlankBannerTwo>

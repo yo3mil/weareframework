@@ -49,6 +49,7 @@ export default {
             margin-top: -3.5rem;
             margin-right: -6rem;
            z-index: 100;
+           animation: slide-down-top 1s forwards;
         }
         &__circle1,
         &__circle2 {
@@ -66,7 +67,7 @@ export default {
             80deg, rgba($color-main, 1) 
             0%, rgba($color-white, 0.3) 
             90%, rgba($color-main,1) 100%);
-            -webkit-box-shadow: 0px 0px 10px 0px $color-main;
+            box-shadow: 0px 0px 10px 0px $color-main;
             filter: blur(4px);
             
         }
@@ -84,7 +85,7 @@ export default {
             align-self: top;
             justify-self: center;
             filter: blur(3px);
-            -webkit-box-shadow: 0px 0px 15px 0px $color-secondary
+            box-shadow: 0px 0px 15px 0px $color-secondary
         }
     }
 </style>

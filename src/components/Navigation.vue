@@ -11,13 +11,14 @@
         <img src="./../assets/tw.png" alt="tw icon">
     </div>
     <div :class="{active: menu}" class="navigation__bg"></div>
-    <div @click="toggleMenu" v-if="menu" class="navigation__menu">
-        <router-link  tag="div" to="/" class="navigation__menu-item">Home</router-link>
-        <router-link  tag="div" to="/about" class="navigation__menu-item">About</router-link>
-        <router-link  tag="div" to="/blog" class="navigation__menu-item">Blog</router-link>
-        <router-link  tag="div" to="/contact" class="navigation__menu-item">Contact us</router-link>
-    </div>
-    
+    <transition name="slide-right-left">
+        <div @click="toggleMenu" v-if="menu" class="navigation__menu">
+            <router-link  tag="div" to="/" class="navigation__menu-item">Home</router-link>
+            <router-link  tag="div" to="/about" class="navigation__menu-item">About</router-link>
+            <router-link  tag="div" to="/blog" class="navigation__menu-item">Blog</router-link>
+            <router-link  tag="div" to="/contact" class="navigation__menu-item">Contact us</router-link>
+        </div>
+    </transition>
   </div>
 </template>
 
@@ -129,7 +130,7 @@
             border-radius: 50%;
             height: 49rem;
             width: 49rem;
-            transition: all 1s;
+            transition: all 1.5s;
             
             background: rgb(1,10,114);
             background: radial-gradient(

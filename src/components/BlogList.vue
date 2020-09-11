@@ -5,8 +5,9 @@
             <h2 @click="filterTypes('branding')" :class="{active: category === 'branding'}"> branding</h2>
             <h2 @click="filterTypes('UX')" :class="{active: category === 'UX'}">UX/UI</h2>
         </div>
-        <div class="blogs__list grid_cards">
-            <BlogCard 
+        <div class="blogs__list" v-masonry="containerId" gutter="80" transition-duration=".8s">
+            <BlogCard
+                v-masonry-tile
                 v-for="card in filtered"
                 :key="card.id"
                 :content="card"
@@ -15,7 +16,7 @@
     </div>
 </template>
 <script>
-import BlogCard from "./cards/BlogCard"
+import BlogCard from "./cards/BlogCard";
 export default {
     components: {
         BlogCard
@@ -33,16 +34,15 @@ export default {
                 { id: 6, img: '6.png', heading: "Where To Look For Cheap Brochure Printing", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "normal"},
                 { id: 7, img: '7.png', heading: "Every Designer's Workplace Fantasy.", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'branding', size: "normal" },
                 { id: 8, img: '8.png', heading: "Promotional Advertising Specially For You.", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "normal" },
-                { id: 9, img: '9.png', heading: "Importance Of The Company Logo Design.", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "normal" },
-                { id: 10, img: '10.png', heading: "6 Powerful Tips How To Enhance User Experiance", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "small" },
+                { id: 9, img: '9.png', heading: "Importance Of The Company Logo Design.", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "small" },
+                { id: 10, img: '10.png', heading: "6 Powerful Tips How To Enhance User Experiance", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "normal" },
                 { id: 11, img: '11.png', heading: "Great Way to get Attention", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'branding', size: "normal" },
                 { id: 12, img: '12.png', heading: "Free Classfields Using Them To Promote Stuff", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, turpis…", type: 'UX', size: "small" },
-                
             ]
         }
     },
     mounted() {
-        this.showAll()
+       this.showAll()
     },
     methods: {
         showAll() {
@@ -65,6 +65,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+    .gutter-block-selector {
+        width: 4vw;
+    }
     .active {
         color: $color-main;
         transform: scale(1.5);
@@ -78,13 +81,13 @@ export default {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        //min-height: 100rem;
+        
         &__nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex: 0 0 20vh;
-            width: 30%;
+            width: 25rem;
             & h2 {
                 cursor: pointer;
                 transition: all .5s;
@@ -96,17 +99,10 @@ export default {
         &__list {
             width: 100%;
             height: 100%;
-            grid-gap: 3vw;
-            margin-bottom: 4rem;
-            display: grid;
-            grid-template-rows: repeat(3, 1fr) ;
-            grid-template-columns: repeat(3, minmax(15rem, 1fr)) ;
-            // display: grid;
-            // grid-template-rows:  min-content;
-            // grid-template-columns: repeat(3, minmax(40rem, 1fr));
-            // grid-gap: 1.5rem;
-            // grid-auto-rows: min-content;
-            
+            margin-bottom: 3vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 </style>

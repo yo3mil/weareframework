@@ -1,3 +1,5 @@
+
+// banner transition
 .slideLeft-leave-active,
 .slideLeft-enter-active {
   transition: 1s;
@@ -11,14 +13,34 @@
   transform: translate(-100%, 0);
   
 }
-
+// menu options animation
+.slide-right-left-enter-active {
+  animation: slide-right-left 1.2s ;
+}
+.slide-right-left-leave-active {
+  animation: slide-right-left .6s reverse;
+}
+@keyframes slide-right-left {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  } 
+  100% {transform: translateX(0%);}
+}
+// route fade
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: .8s;
+  transition-duration: .5s;
   transition-property: opacity;
   transition-timing-function: ease;
 }
 .fade-enter,
 .fade-leave-active {
   opacity: 0
+}
+
+// slide
+@keyframes slide-down-top {
+  0% {transform: translateY(300%) rotate(40deg);} 
+  100% {transform: translateY(0%); }
 }
