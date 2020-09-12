@@ -79,6 +79,7 @@ export default {
             flex-direction: column;
             justify-content: space-evenly;
             align-items: flex-start;
+            @media (max-width: 750px) {display: none;}
             &-number {
                 cursor: pointer;
                 color: $color-secondary;
