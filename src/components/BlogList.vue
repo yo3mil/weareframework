@@ -5,7 +5,7 @@
             <h2 @click="filterTypes('branding')" :class="{active: category === 'branding'}"> branding</h2>
             <h2 @click="filterTypes('UX')" :class="{active: category === 'UX'}">UX/UI</h2>
         </div>
-        <div class="blogs__list" v-masonry="containerId" gutter="80" transition-duration=".8s">
+        <div class="blogs__list" v-masonry gutter="82" transition-duration=".8s" fit-width="true">
             <BlogCard
                 v-masonry-tile
                 v-for="card in filtered"
@@ -65,8 +65,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .gutter-block-selector {
-        width: 4vw;
+    .gutter {
+        width: 100%;
     }
     .active {
         color: $color-main;
@@ -88,6 +88,9 @@ export default {
             justify-content: space-between;
             flex: 0 0 20vh;
             width: 25rem;
+            @media (max-width: 750px) {
+                width: 75%;
+            } 
             & h2 {
                 cursor: pointer;
                 transition: all .5s;

@@ -9,7 +9,7 @@
     grid-row: 1 /-1;
     grid-column: 1 / -1;
     height: 100vh;
-    background-color: rgba($color-main, .6);
+    //background-color: rgba($color-main, .6);
     & h1 {
       grid-column: 2;
       grid-row: 2;

@@ -26,6 +26,9 @@ export default {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    @media (max-width: 1500px) {
+        font-size: 55%;
+    } 
   }
   * {
     margin: 0;

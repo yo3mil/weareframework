@@ -2,7 +2,15 @@
     display: grid;
     grid-template-rows: 10vh repeat(2, min-content);
     grid-template-columns: 18vw 1fr 18vw;
-                 
+
+    @media (max-width: 1500px) {
+        //grid-template-rows: 8vh 1fr 8vh;
+        grid-template-columns: 10vw 1fr 10vw 
+    }      
+    @media (max-width: 750px) {
+        //grid-template-rows: 8vh 1fr 8vh;
+        grid-template-columns: 5vw 1fr 5vw 
+    }       
 }
 .grid2x3 {
     display: grid;

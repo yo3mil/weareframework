@@ -1,15 +1,6 @@
 <template>
-  <div class="blank__banner">
-
-  </div>
+  <div class="blank__banner"></div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss" scoped>
     .blank__banner {
         grid-row: 1 / -1;

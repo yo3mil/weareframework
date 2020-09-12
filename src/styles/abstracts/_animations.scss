@@ -1,18 +1,5 @@
 
-// banner transition
-.slideLeft-leave-active,
-.slideLeft-enter-active {
-  transition: 1s;
-  transition-timing-function: ease-in-out;
-  
-}
-.slideLeft-enter {
-  transform: translate(100%, 0);
-}
-.slideLeft-leave-to {
-  transform: translate(-100%, 0);
-  
-}
+
 // menu options animation
 .slide-right-left-enter-active {
   animation: slide-right-left 1.2s ;
@@ -27,7 +14,7 @@
   } 
   100% {transform: translateX(0%);}
 }
-// route fade
+// route/banner fade
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: .5s;
@@ -39,8 +26,42 @@
   opacity: 0
 }
 
-// slide
+// slide up (mobile / on banner)
 @keyframes slide-down-top {
   0% {transform: translateY(300%) rotate(40deg);} 
   100% {transform: translateY(0%); }
+}
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes fade-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes fade-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

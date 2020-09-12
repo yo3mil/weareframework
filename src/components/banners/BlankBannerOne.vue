@@ -1,15 +1,6 @@
 <template>
-  <div class="blank__banner">
-
-  </div>
+  <div class="blank__banner"></div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss" scoped>
     .blank__banner {
         grid-row: 1 / -1;
@@ -18,9 +9,9 @@ export default {
         height: 100%;
         background: $color-main;
         background: linear-gradient(
-            125deg, rgba($color-main,1) 
-            0%, rgba($color-main, 0.7) 
-            40%, rgba($color-main,1) 100%);
+            125deg, rgba($color-white,.8) 
+            0%, rgba($color-main, .8) 
+            40%, rgba($color-white,.8) 100%);
         overflow: hidden;
     }
 </style>
