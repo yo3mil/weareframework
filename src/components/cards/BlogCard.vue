@@ -33,12 +33,8 @@
     }
 </script>
 <style lang="scss" scoped>
-    .small {
-        height: 30rem;
-    }
-    .normal {
-        height: 35rem;
-    }
+    .small { height: 30rem; }
+    .normal { height: 35rem; }
     .card {
         width: 22rem;
         background-size: cover;
@@ -48,7 +44,7 @@
         position: relative;
         cursor: pointer;
         @media (max-width: 750px) {
-            width: 20rem;
+            width: 18rem;
         } 
         &__circle {
             z-index: 2;

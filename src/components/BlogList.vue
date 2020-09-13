@@ -2,10 +2,10 @@
     <div class="blogs">
         <div class="blogs__nav">
             <h2 @click="showAll" :class="{active: category === 'all'}">all</h2>
-            <h2 @click="filterTypes('branding')" :class="{active: category === 'branding'}"> branding</h2>
+            <h2 @click="filterTypes('branding')" :class="{active: category === 'branding'}">branding</h2>
             <h2 @click="filterTypes('UX')" :class="{active: category === 'UX'}">UX/UI</h2>
         </div>
-        <div class="blogs__list" v-masonry gutter="82" transition-duration=".8s" fit-width="true">
+        <div v-masonry gutter="82" transition-duration=".8s" fit-width="true">
             <BlogCard
                 v-masonry-tile
                 v-for="card in filtered"
@@ -74,38 +74,30 @@ export default {
         font-weight: 600;
     }
     .blogs {
-        margin-top: 2rem;
         grid-row: 3;
         grid-column: 2;
         display: flex;
         flex-direction: column;
+        justify-self: center;
         align-items: center;
-        width: 100%;
-        
+        margin-top: 2rem;
+        // for masonry reload
+        width: 64vw;
+        @media (max-width: 1500px) { width: 80vw; }      
+        @media (max-width: 750px) { width: 90vw; }   
         &__nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex: 0 0 20vh;
             width: 25rem;
-            @media (max-width: 750px) {
-                width: 75%;
-            } 
+            @media (max-width: 750px) { width: 65%;} 
             & h2 {
                 cursor: pointer;
                 transition: all .5s;
-                &:hover {
-                    color: $color-main;
-                }
+                &:hover { color: $color-main; }
             }
         }
-        &__list {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 3vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        
     }
 </style>

@@ -5,9 +5,9 @@
             <h1>But sorry my</h1>
             <h1>dearly belowed</h1>
         </div>
-        <img class="banner__mobile" src="./../../assets/mobile.png" alt="hand with mobile">
-        <div data-depth="0" class="banner__circle1"></div>
-        <div data-depth="0" class="banner__circle2"></div>
+        <img class="banner__mobile" src="./../../assets/mobile.png" alt="hand with a mobile">
+        <div v-parallax=".2" class="banner__circle1"></div>
+        <div v-parallax=".2" class="banner__circle2"></div>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -66,6 +66,7 @@
             grid-row: 1;
             grid-column: 1;
             align-self: end;
+            margin-bottom: 4rem;
             justify-self: center;
             background: linear-gradient(
             80deg, rgba($color-main, 1) 

@@ -2,7 +2,8 @@
 
 // menu options animation
 .slide-right-left-enter-active {
-  animation: slide-right-left 1.2s ;
+  animation: slide-right-left 1s ;
+  
 }
 .slide-right-left-leave-active {
   animation: slide-right-left .6s reverse;

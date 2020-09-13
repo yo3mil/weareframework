@@ -1,5 +1,10 @@
 <template>
-    <v-touch class="hero" @swipeleft="nextBanner" :swipe-options="{ threshold: 200 }">
+    <v-touch 
+        class="hero" 
+        @swipeleft="nextBanner" 
+        @swiperight="previousBanner"
+        :swipe-options="{ threshold: 200, direction: 'horizontal'}"
+    >
         <transition name="fade" mode="out-in">
             <MobileBanner v-if="banner === 1"></MobileBanner>
             <BlankBannerOne v-if="banner === 2"></BlankBannerOne>
@@ -14,7 +19,7 @@
         <div class="hero__slider">
             <div :style="{ left: `${slider}rem` }"></div>
         </div>
-        <div class="hero__circle"></div>
+        <div  class="hero__circle"></div>
     </v-touch>
 </template>
 <script>
@@ -39,20 +44,27 @@ export default {
             this.slider = slider;
         },
         nextBanner() {
-            if(this.banner === 1 || this.banner === 2) {
+            if(this.banner !== 3 ) {
                 this.banner++
                 this.slider = this.slider + 4;
             } else {
                 this.banner = 1;
                 this.slider = 0;
             }
+        },
+        previousBanner()  {
+            if(this.banner !== 1 ) {
+                this.banner--;
+                this.slider = this.slider - 4;
+            } else {
+                this.banner = 3;
+                this.slider = 8;
+            }
         }
     }
 }
 </script>
 <style lang="scss" scoped>
-    .slider-mid { left: 4rem; }
-    .slider-end { left: 8rem; }
     .active {
         font-size: 1.6rem;
         text-decoration: underline;

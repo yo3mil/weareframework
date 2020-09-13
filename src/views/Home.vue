@@ -1,15 +1,13 @@
 <template>
-  <div class="home grid_main">
-    
+  <main class="home grid_main">
     <HeroSection/>
     <BlogList/>
-  </div>
+  </main>
 </template>
 
 <script>
 import HeroSection from "../components/HeroSection"
 import BlogList from "../components/BlogList";
-
 export default {
   components: {
     HeroSection,

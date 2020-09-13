@@ -1,5 +1,5 @@
 <template>
   <div class="blank_page grid_main">
-      <h1>Contact</h1>
+      <h1>Gallery</h1>
   </div>
 </template>
